@@ -1,0 +1,74 @@
+@use "../globals/mixin" as *;
+@use "../globals/colors" as *;
+
+.hero {
+  background:url(/images/hero-img.jpg) no-repeat center center;
+  padding: 90px 0 173px;
+  &__texts {
+    text-align: left;
+    width: 40%;
+    &_top {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 24px;
+      a {
+        &:first-child {
+          margin-right: 49px;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 4rem;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+  &__subtitle {
+    font-size: 1.3rem;
+    color: #fff;
+  }
+  &__btn {
+    @include btn;
+    margin-top: 46px;
+  }
+  @media (max-width:1024px) {
+    padding: 60px 0 153px;
+    &__texts {
+      width: 60%;
+      &_top {
+        font-size: .9rem;
+      }
+    }
+    &__title {
+      font-size: 3.5rem;
+    }
+    &__subtitle{
+      font-size: 1rem;
+    }
+  }
+  @media (max-width:500px) {
+    height: calc(100vh - 13vh);
+    background:linear-gradient(to right, rgba(#000, .5),rgba(#000, .8)),url(/images/hero-img.jpg) no-repeat center center;
+    // background-image: linear-gradient(to right,hsla(195, 100%, 18%, 0.9), hsla(195, 100%, 18%, 0.9)),url(./images/hero-img);
+    padding: 50px 0 173px;
+    &__texts {
+      text-align: center;
+      width: 100%;
+      &_top {
+        font-size: .9rem;
+      }
+    }
+    &__title {
+      font-size: 2rem;
+      margin-top: 80px;
+    }
+    &__subtitle{
+      margin-top: 40px;
+      font-size: .8rem;
+    }
+    &__btn {
+      margin-top: 150px;
+    }
+  }
+}

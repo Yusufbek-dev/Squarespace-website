@@ -1,0 +1,108 @@
+@use "../globals/mixin" as *;
+.uk-alert-close {
+  position: absolute;
+  min-width: 5px;
+  min-height: 5px;
+  top: 50px;
+  left: 15px;
+  color: inherit;
+  margin-left: 95%;
+  opacity: .4;
+}
+.uk-alert {
+  position: relative;
+  margin-bottom: 20px;
+  padding:50px 10px!important;
+}
+
+.alert-box {
+  padding-top: 50px;
+  .alert-logo {
+    @include adjust;
+    padding: 0 2.5%;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 22px;
+    color: #000!important;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-right: 0!important;
+    margin: 0 20%!important;
+    margin-bottom: 77px!important;
+    color:#000!important;
+  }
+  &__list{
+    @include adjust;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &_img {
+      width: 100%;
+      height: auto;
+    }
+    &_item  {
+      max-width: 447px;
+      min-width: 247px;
+      max-height: 400px;
+      padding: 5px;
+      width: 30%;
+      // background-color: rgb(177, 96, 96)!important;
+      h3{
+        padding-top: 30px;
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+        color: #000 !important;;
+      }
+      p{
+        font-size: 1rem;
+        color: #000!important;
+        width: 100%;
+      }
+    }
+  }
+  @media (max-width:500px) {
+    .uk-alert-close {
+      position: absolute;
+      min-width: 5px;
+      min-height: 5px;
+      top: 50px;
+      left: 15px;
+      color: inherit;
+      margin-left: 85%;
+    }
+    &__title {
+      text-align: center;
+      font-size: 2rem;
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: .8rem;
+      margin: 0 5%!important;
+      margin-bottom: 27px!important;
+    }
+    &__list {
+      &_item  {
+        max-width: 447px;
+        min-width: 247px;
+        max-height: 400px;
+        padding: 5px;
+        width: 30%;
+        // background-color: rgb(177, 96, 96)!important;
+        h3{
+          padding-top: 30px;
+          font-size: 1.1rem;
+        }
+        p{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}
