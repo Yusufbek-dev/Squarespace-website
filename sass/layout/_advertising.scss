@@ -1,0 +1,52 @@
+@use "../globals/colors" as *;
+.advertising {
+  padding: 120px 0;
+  background: linear-gradient(to right, rgba(0,0,0, .2), rgba(0,0,0, .2)),url(/images/advertising-img.jpg)no-repeat center bottom;
+  &__title {
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: .9px;
+    color: #fff;
+    margin-bottom: 25px;
+    width:350px;
+    margin: 0 auto;
+  }
+  &__subtitle {
+    width:350px;
+    margin: 25px auto;
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: .9px;
+    color: #fff;
+  }
+  &__btn {
+    width:180px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    letter-spacing: .8px;
+    font-size: 1.1rem;
+    color: #fff!important;
+    text-transform: uppercase;
+    text-decoration: underline;
+    transition: .3s;
+    &:hover {
+      color:$primary-color!important;
+      text-decoration: underline;
+    }
+  }
+  @media (max-width:400px) {
+    padding: 70px 0;
+    &__title {
+      font-size: 1.8rem;
+      width: 220px;
+    }
+    &__subtitle {
+      font-size:.9rem;
+      width: 220px;
+    }
+    &__btn {
+      font-size:1rem;
+    }
+  }
+}

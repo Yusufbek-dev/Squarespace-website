@@ -1,0 +1,111 @@
+@use "../globals/colors" as *;
+@use "../globals/mixin" as *;
+.start {
+  padding: 80px 0;
+  &__title {
+    font-size: 3rem;
+    margin: 0 auto;
+    width: 600px;
+    letter-spacing: .7px;
+    margin-bottom: 22px;
+  }
+  &__subtitle {
+    width: 600px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+    letter-spacing: .7px;
+    margin-bottom: 20px;
+  }
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    width: 190px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: .3s;
+    color: #000!important;
+    text-decoration: underline;
+    &:hover {
+      opacity: .7;
+      text-decoration: underline;
+    }
+  }
+  &__list {
+    margin-top: 65px;
+    @include adjust;
+    &_item {
+      width: 50%;
+      .start__img {
+        margin-bottom: 13px;
+      }
+      a {
+        font-size: 1rem;
+        text-transform: uppercase;
+        transition: .3s;
+        color: #000!important;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      span {
+        font-size: 1rem;
+        margin-left: 91px;
+        margin-top: 13px;
+        color:  #868686;
+        strong {
+          color: #000;
+        }
+      }
+    }
+  }
+  @media (max-width:1024px) {
+    &__title {
+      font-size: 2.5rem;
+      text-align: center;
+      width: 470px;
+    }
+    &__subtitle {
+      text-align: center;
+      font-size: 1rem;
+      width: 470px;
+    }
+    &__list {
+      margin-top: 65px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 30px;
+      &_item {
+        width: 65%;
+      }
+    }
+  }
+  @media (max-width:500px) {
+    padding: 50px 0;
+    &__title {
+      font-size: 1.8rem;
+      width: 260px;
+    }
+    &__subtitle {
+      font-size: .8rem;
+      width: 260px;
+    }
+    &__btn {
+      width: 145px;
+      font-size: .8rem;
+    }
+    &__list {
+      margin-top: 35px;
+      row-gap: 25px;
+      &_item {
+        width: 85%;
+        a {
+          font-size: .8rem;
+        }
+        span {
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use "../globals/mixin" as *;
+.protect {
+ &>div {
+  @include adjust;
+ }
+  &__img {
+    width: 50%;
+    height: 558px;
+    background:url(/images/protect-img.jpg)no-repeat;
+    background-position: center 80%;
+  }
+  &__texts {
+    width:33%;
+    &_title {
+      font-size:3rem;
+      margin-bottom: 22px;
+      letter-spacing: .8px;
+    }
+    &_dsc {
+      font-size: 1.2rem;
+      letter-spacing: .8px;
+    }
+  }
+  @media (max-width:1024px) {
+    position: relative;
+    height: 558px;
+    &__img {
+      width:100vw;
+      background:linear-gradient(to right, rgba(0,0,0,.3),rgba(0,0,0,.3)), #fff url(/images/protect-img.jpg)no-repeat center center;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-position: cover;
+      position: absolute;
+    }
+    &__texts {
+      position: relative;
+      top: 50px;
+      width: 60%;
+      margin: 0 20%;
+      &_title {
+        font-size: 2.5rem;
+        color: #fff;
+        text-align: center;
+      }
+      &_dsc {
+        font-size: 1rem;
+        color: #fff;
+        text-align: center;
+      }
+    }
+  }
+  @media (max-width:500px) {
+    &__texts {
+      top: 50px;
+      width:95%;
+      margin: 0 2.5%;
+      &_title {
+        font-size: 2rem;
+      }
+      &_dsc {
+        font-size: .9rem;
+      }
+    }
+  }
+
+}

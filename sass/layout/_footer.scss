@@ -1,1 +1,71 @@
 @use "../globals/colors" as *;
+footer {
+  padding: 115px 0 99px;
+  background-color: #000;
+  @media (max-width:1024px) {
+    padding: 45px 0;
+  }
+}
+.footer {
+  display: flex;
+  justify-content:space-between;
+  @media (max-width:1024px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    row-gap: 24px;
+  }
+  &__logo {
+    width: 20%;
+    &_img {
+      display: block;
+      margin-bottom: 35px;
+    }
+    &_form {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      label {
+        min-width: 150px;
+        max-width: 150px;
+        color: #fff!important;
+        padding: 16px 15px;
+        position: relative;
+        background-color: #1A1A1A;
+        span {
+          position: absolute;
+          right: 10px;
+          color: #fff;;
+        }
+      }
+      #sum {
+        display: none;
+      }
+      #lan {
+        display: none;
+      }
+    }
+    @media (max-width:1024px) {
+      width:150px;
+      margin: 0 auto; 
+    }
+  }
+  &__list {
+    width: 11%;
+    &_item {
+      &:nth-child(1) {
+        p {
+          color: #fff;
+        }
+        margin-bottom: 30px;
+      }
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    @media (max-width:1024px) {
+      border-top: 1px solid #cacaca80;
+      padding-top: 10px;
+      width: 100%;
+    }
+  }
+}

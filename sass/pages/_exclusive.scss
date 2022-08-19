@@ -1,0 +1,111 @@
+@use "../globals/colors" as *;
+@use "../globals/mixin" as *;
+.exclusive {
+  background-color:$primary-color;
+  padding: 80px 0 120px;
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    width:600px;
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 22px;
+  }
+  &__subtitle {
+    text-align: center;
+    margin: 0 auto;
+    width: 642px;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+  &__list {
+    padding-top: 120px;
+    @include adjust;
+    flex-wrap: nowrap;
+    &_texts {
+      width: 33%;
+      h3 {
+        font-size: 2.2rem;
+        color: #fff;
+        margin-bottom: 22px;
+      }
+      p {
+        font-size: 1.2rem;
+        color: #fff;
+      }
+    }
+    &_img {
+      width: 45%;
+    }
+  }
+  @media (max-width:1024px) {
+    &__title {
+      font-size: 2.5rem;
+      width: 450px;
+    }
+    &__subtitle {
+      font-size:1rem;
+      width: 470px;
+    }
+    &__list {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 30px;
+      &--second {
+        flex-direction: column-reverse;
+      }
+      &:last-child {
+        flex-direction: column-reverse;
+      }
+      &_texts {
+        width: 65%;
+        h3 {
+          font-size: 1.9rem;
+          letter-spacing: .9px;
+        }
+        p {
+          font-size: 1rem;
+          letter-spacing: .7px;
+        }
+      }
+      &_img {
+        width: 65%;
+      }
+    }
+  }
+  @media (max-width:500px) {
+    padding: 50px 0 70px;
+    &__title {
+      font-size: 1.7rem;
+      margin: 0 2.5%;
+      width:95%;
+      letter-spacing: 1px;
+    }
+    &__subtitle {
+      padding-top: 25px;
+      font-size:.8rem;
+      letter-spacing: 1px;
+      margin: 0 2.5%;
+      width:95%;
+    }
+    &__list {
+      justify-content: center;
+      padding-top: 50px;
+      row-gap: 20px;
+      &_texts {
+        width: 85%;
+        h3 {
+          font-size: 1.4rem;
+          text-align: center;
+        }
+        p {
+          font-size: .8rem;
+          text-align: justify;
+        }
+      }
+      &_img {
+        width: 85%;
+      }
+    }
+  }
+}

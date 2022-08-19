@@ -70,16 +70,28 @@ a {
 header {
   background-color: #000;
   transition: all 0.6s ease-in-out;
-  animation: navbar 0.6s;
+  -webkit-animation: navbar 0.6s;
+          animation: navbar 0.6s;
 }
 
 header.sticky {
   transition: 0.6s;
   background-color: #000;
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   z-index: 99;
-  animation: nav 0.6s forwards;
+  -webkit-animation: nav 0.6s forwards;
+          animation: nav 0.6s forwards;
+}
+
+@-webkit-keyframes nav {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes nav {
@@ -88,6 +100,14 @@ header.sticky {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@-webkit-keyframes close-nav {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
   }
 }
 @keyframes close-nav {
@@ -113,7 +133,8 @@ header.sticky {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 56px;
+  -moz-column-gap: 56px;
+       column-gap: 56px;
 }
 .head__list_item {
   text-align: center;
@@ -134,7 +155,8 @@ header.sticky {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  column-gap: 5px;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
 }
 .head__register_log-in {
   background-color: transparent;
@@ -1509,7 +1531,8 @@ footer {
 .plans__list {
   display: flex;
   margin-left: 40%;
-  column-gap: 88px;
+  -moz-column-gap: 88px;
+       column-gap: 88px;
   justify-content: space-between;
 }
 .plans__list_box {
@@ -1545,6 +1568,4 @@ footer {
     width: 80%;
     margin: 0 auto;
   }
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -69,38 +69,33 @@
   }
   @media (max-width:500px) {
     .uk-alert-close {
-      position: absolute;
-      min-width: 5px;
-      min-height: 5px;
-      top: 50px;
-      left: 15px;
-      color: inherit;
       margin-left: 85%;
     }
     &__title {
       text-align: center;
       font-size: 2rem;
+      letter-spacing: .9px;
     }
     &__subtitle {
       text-align: center;
       font-size: .8rem;
       margin: 0 5%!important;
       margin-bottom: 27px!important;
+      letter-spacing: .9px;
     }
     &__list {
-      &_item  {
+      .alert-box__list_item  {
         max-width: 447px;
         min-width: 247px;
         max-height: 400px;
         padding: 5px;
         width: 30%;
-        // background-color: rgb(177, 96, 96)!important;
         h3{
           padding-top: 30px;
-          font-size: 1.1rem;
+          font-size: .9rem;
         }
         p{
-          font-size: .8rem;
+          font-size: .7rem;
         }
       }
     }

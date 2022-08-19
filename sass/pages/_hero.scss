@@ -9,6 +9,7 @@
     width: 40%;
     &_top {
       font-size: 1.1rem;
+      letter-spacing: .9px;
       text-transform: uppercase;
       color: #fff;
       margin-bottom: 24px;
@@ -23,21 +24,24 @@
     font-size: 4rem;
     color: #fff;
     margin-bottom: 22px;
+    letter-spacing: .9px;
   }
   &__subtitle {
     font-size: 1.3rem;
     color: #fff;
+    letter-spacing: .8px;
   }
   &__btn {
     @include btn;
     margin-top: 46px;
+    letter-spacing: .8px;
   }
   @media (max-width:1024px) {
     padding: 60px 0 153px;
     &__texts {
       width: 60%;
       &_top {
-        font-size: .9rem;
+        font-size: .8rem;
       }
     }
     &__title {
@@ -68,7 +72,7 @@
       font-size: .8rem;
     }
     &__btn {
-      margin-top: 150px;
+      margin-top: 120px;
     }
   }
 }
